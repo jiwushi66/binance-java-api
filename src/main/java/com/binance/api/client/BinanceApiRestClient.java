@@ -186,6 +186,14 @@ public interface BinanceApiRestClient {
   List<Order> getOpenOrders(OrderRequest orderRequest);
 
   /**
+   * Cancel all open orders on a symbol.
+   *
+   * @param orderRequest order request parameters
+   * @return a list of all account open orders on a symbol.
+   */
+  List<Order> cancelOpenOrders(OrderRequest orderRequest);
+
+  /**
    * Get all account orders; active, canceled, or filled.
    *
    * @param orderRequest order request parameters

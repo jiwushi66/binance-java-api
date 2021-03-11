@@ -209,6 +209,14 @@ public interface BinanceApiAsyncRestClient {
   void getOpenOrders(OrderRequest orderRequest, BinanceApiCallback<List<Order>> callback);
 
   /**
+   * Cancel all open orders on a symbol (asynchronous).
+   *
+   * @param orderRequest order request parameters
+   * @param callback the callback that handles the response
+   */
+  void cancelOpenOrders(OrderRequest orderRequest, BinanceApiCallback<List<Order>> callback);
+
+  /**
    * Get all account orders; active, canceled, or filled.
    *
    * @param orderRequest order request parameters
